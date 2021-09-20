@@ -2,32 +2,23 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import { ProductItem } from "components/ProductItem";
 import { GetServerSideProps } from "next";
-import { SimpleGrid, useBreakpointValue } from "@chakra-ui/react";
-
-import { SearchDesktopVersion } from "./Desktop";
-import { SearchMobileVersion } from "./Mobile";
+import { SimpleGrid } from "@chakra-ui/react";
 
 export default function Search() {
   const { query } = useRouter();
-  const isWideVersion = useBreakpointValue({
-    base: false,
-    lg: true,
-  });
 
   return (
     <>
       <Head>
         <title>Pokemon {query.name} | Pokemon Store</title>
       </Head>
-      {isWideVersion ? (
-        <>
-          <SearchDesktopVersion />
-        </>
-      ) : (
-        <>
-          <SearchMobileVersion />
-        </>
-      )}
+      <SimpleGrid
+        alignItems="center"
+        justifyContent="center"
+        gridTemplateColumns="repeat(auto-fit, minmax(240px, 280px))"
+      >
+        <ProductItem url={`/pokemon/${query.name}`} />
+      </SimpleGrid>
     </>
   );
 }

@@ -6,5 +6,5 @@ export type Catalog = {
 };
 
 export type CatalogContext = {
-  catalog: CatalogAll;
+  catalog: CatalogAll | undefined;
 };

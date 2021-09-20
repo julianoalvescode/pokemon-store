@@ -1,3 +1,4 @@
+/* eslint-disable */
 import {
   Stack,
   Container,
@@ -49,7 +50,7 @@ export function HeaderMobileVersion() {
           <Flex justifyContent="space-between">
             <Flex alignItems="center" gridGap="5">
               <Link href="/" shallow={false}>
-                <Heading color="white">Pokemon Eletric</Heading>
+                <Heading color="white">Pokemon Fire</Heading>
               </Link>
             </Flex>
           </Flex>

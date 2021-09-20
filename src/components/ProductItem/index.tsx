@@ -9,7 +9,7 @@ import { useCart } from "hooks/useCart";
 import { PokemonUnit } from "infra/services/catalog/types";
 
 export const ProductItem = ({ name, url }: I.ProductItemProps) => {
-  const [data, setData] = useState<PokemonUnit | null>({} as PokemonUnit);
+  const [data, setData] = useState<PokemonUnit | undefined>({} as PokemonUnit);
   const [loading, setLoading] = useState(false);
 
   const { addItemCart } = useCart();
@@ -22,7 +22,7 @@ export const ProductItem = ({ name, url }: I.ProductItemProps) => {
         setData(data);
         setLoading(true);
       } catch (e) {
-        setData(null);
+        setData(undefined);
         setLoading(true);
       }
     }

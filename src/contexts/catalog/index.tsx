@@ -8,10 +8,7 @@ export const CatalogContext = createContext<I.CatalogContext>(
 );
 
 export function CatalogProvider({ children }: I.Catalog) {
-  const { data } = useQuery<I.Catalog | unknown>(
-    "catalog",
-    CatalogService.loadCatalog
-  );
+  const { data } = useQuery("catalog", CatalogService.loadCatalog);
 
   return (
     <>

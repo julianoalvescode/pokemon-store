@@ -1,3 +1,4 @@
+/* eslint-disable */
 import {
   Stack,
   Container,
@@ -38,7 +39,7 @@ export function HeaderDesktopVersion() {
           <Flex justifyContent="space-between">
             <Flex alignItems="center" gridGap="5">
               <Link href="/" shallow={false}>
-                <Heading color="white">Pokemon Eletric</Heading>
+                <Heading color="white">Pokemon Fire</Heading>
               </Link>
               <form onSubmit={handleSubmit(handleSearch)}>
                 <InputGroup maxW="400px">
