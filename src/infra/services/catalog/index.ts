@@ -5,7 +5,7 @@ import * as I from "./types";
 class CatalogService {
   async loadCatalog(): Promise<I.CatalogAll | unknown> {
     try {
-      const { data } = await HttpClient.get("/type/electric");
+      const { data } = await HttpClient.get("/type/fire");
       return data;
     } catch (e) {
       return null;
