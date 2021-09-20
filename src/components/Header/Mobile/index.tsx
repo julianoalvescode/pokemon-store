@@ -50,7 +50,7 @@ export function HeaderMobileVersion() {
           <Flex justifyContent="space-between">
             <Flex alignItems="center" gridGap="5">
               <Link href="/" shallow={false}>
-                <Heading color="white">Pokemon Fire</Heading>
+                <Heading color="white">Pokemon Electric</Heading>
               </Link>
             </Flex>
           </Flex>

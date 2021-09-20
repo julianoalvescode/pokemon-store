@@ -39,7 +39,7 @@ export function HeaderDesktopVersion() {
           <Flex justifyContent="space-between">
             <Flex alignItems="center" gridGap="5">
               <Link href="/" shallow={false}>
-                <Heading color="white">Pokemon Fire</Heading>
+                <Heading color="white">Pokemon Electric</Heading>
               </Link>
               <form onSubmit={handleSubmit(handleSearch)}>
                 <InputGroup maxW="400px">
