@@ -2,7 +2,14 @@ import { useEffect, useState } from "react";
 import * as I from "./types";
 
 import CatalogService from "infra/services/catalog";
-import { Container, Heading, Stack, Image, Skeleton } from "@chakra-ui/react";
+import {
+  Container,
+  Heading,
+  Stack,
+  Image,
+  Skeleton,
+  AspectRatio,
+} from "@chakra-ui/react";
 import { Button } from "components/Button";
 
 import { useCart } from "hooks/useCart";
@@ -51,7 +58,13 @@ export const ProductItem = ({ name, url }: I.ProductItemProps) => {
                   backgroundColor="brand.500"
                   padding="3"
                 >
-                  <Image src={data?.sprites?.front_default} alt={name} />
+                  <AspectRatio ratio={4 / 3}>
+                    <Image
+                      src={data?.sprites?.front_default}
+                      objectFit="cover"
+                      alt={name}
+                    />
+                  </AspectRatio>
                   <Heading
                     textAlign="center"
                     fontSize="16px"
